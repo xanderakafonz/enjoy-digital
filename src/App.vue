@@ -1,29 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <Title :copy="content.title" />
+    <Body :copy="content.body"></Body>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import axios from 'axios';
+
+import Title from './components/Title.vue';
+import Body from './components/Body.vue';
 
 @Component({
   components: {
-    HelloWorld,
+    Title,
+    Body,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  baseUrl = process.env.VUE_APP_BASE_URL;
+
+  content = null;
+
+  mounted() {
+    this.fetchData();
+  }
+
+  fetchData() {
+    const url = `${this.baseUrl}/data/content.json`;
+    axios.get(url).then((response) => {
+      this.content = response.data;
+    });
+  }
+}
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
