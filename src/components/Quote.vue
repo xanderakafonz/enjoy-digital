@@ -1,7 +1,12 @@
 <template>
   <div class="quote">
-    <blockquote>"{{copy.body}}"</blockquote>
-    <p>{{copy.subquote}}</p>
+    <blockquote>
+      <p>
+        "{{copy.body}}"
+      </p>
+      <footer><cite>{{copy.subquote}}</cite></footer>
+    </blockquote>
+    <div class="block"></div>
   </div>
 </template>
 
@@ -15,5 +20,7 @@ export default class Quote extends Vue {
 </script>
 
 <style scoped lang="scss">
-
+  blockquote {
+    margin: 60px 0 0 20px;
+  }
 </style>

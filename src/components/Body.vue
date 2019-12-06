@@ -19,6 +19,6 @@ export default class Body extends Vue {
 <style scoped lang="scss">
   .content {
     background: #fff;
-    padding: 65px 85px;
+    padding: 55px 85px;
   }
 </style>

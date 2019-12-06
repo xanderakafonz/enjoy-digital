@@ -15,5 +15,8 @@ export default class Feature extends Vue {
 </script>
 
 <style scoped lang="scss">
-
+  .feature {
+    padding: 50px 85px;
+    background: #fff;
+  }
 </style>

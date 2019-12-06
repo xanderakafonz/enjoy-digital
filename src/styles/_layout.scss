@@ -1,10 +1,11 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 65px);
-    grid-template-rows: repeat(16, 100px);
+    grid-template-rows: repeat(17, 100px);
     grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    max-width: 1000px;
+    grid-row-gap: 25px;
+    padding: 0 10px;
+    max-width: 1020px;
     margin: 0 auto;
 }
 
@@ -20,7 +21,7 @@
     grid-template-columns: repeat(12, 65px);
     grid-template-rows: repeat(8, 100px);
     grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-row-gap: 25px;
 
     .content {
         grid-row: 1 / span 8;
@@ -28,7 +29,7 @@
     }
 
     .block {
-        margin-top: -20px;
+        margin-top: -25px;
         min-height: 325px;
         grid-row-start: 3;
         grid-column: 9 / span 4;
@@ -36,11 +37,34 @@
 }
 
 .quote {
-    grid-row: 10 / 13;
-    grid-column: 2 / 13;
+    grid-row: 10 / span 3;
+    grid-column: 2 / -1;
+    display: grid;
+    grid-template-columns: repeat(11, 65px);
+    grid-template-rows: repeat(3, 100px);
+    grid-column-gap: 20px;
+    grid-row-gap: 25px;
+    position: relative;
+
+    blockquote {
+        position: relative;
+        z-index: 1;
+        grid-row-start: 2;
+        grid-column: 1 / span 4;
+    }
+
+    .block {
+        position: relative;
+        z-index: 0;
+        grid-row: 1 / span 3;
+        grid-column: 3 / -1;
+        min-height: 410px;
+    }
 }
 
 .feature {
-    grid-row: 14 / 16;
-    grid-column: 2 / 8;
+    margin-top: 25px;
+    margin-bottom: -25px;
+    grid-row: 14 / span 3;
+    grid-column: 2 / span 9;
 }
