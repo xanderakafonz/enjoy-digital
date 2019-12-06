@@ -7,11 +7,11 @@
         "Proin aliquam convallis velit, eget viverra felis posuere sed. Vestibulum suscipit nunc ut ex mattis eleifend."
     ],
     "quote": {
-        "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "subquote": "Nam a neque quis est."
     },
     "feature": {
         "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "copy": "Donec vitae metus consectetur, mollis orci nec, efficitur lorem eget velit eget augue porta ven."
+        "body": "Donec vitae metus consectetur, mollis orci nec, efficitur lorem eget velit eget augue porta ven."
     }
 }
