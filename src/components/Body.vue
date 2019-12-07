@@ -19,6 +19,10 @@ export default class Body extends Vue {
 <style scoped lang="scss">
   .content {
     background: #fff;
-    padding: 55px 85px;
+    padding: 20px 25px;
+
+    @media screen and (min-width: 768px) {
+      padding: 55px 85px;
+    }
   }
 </style>
