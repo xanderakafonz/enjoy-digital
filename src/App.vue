@@ -25,8 +25,6 @@ import Feature from './components/Feature.vue';
   },
 })
 export default class App extends Vue {
-  baseUrl = process.env.VUE_APP_BASE_URL;
-
   content = null;
 
   mounted() {
@@ -34,8 +32,7 @@ export default class App extends Vue {
   }
 
   fetchData() {
-    const url = `${this.baseUrl}/data/content.json`;
-    axios.get(url).then((response) => {
+    axios.get(`${window.location.href}/data/content.json`).then((response) => {
       this.content = response.data;
     });
   }
